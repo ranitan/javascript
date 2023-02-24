@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display details</title>
+    <center>TO DISPLAY DETAILS</center>
+    <script type="text/javascript">
+        function registration() {
+
+            var uname = document.getElementById("t1").value;
+            var email = document.getElementById("t2").value;
+            var pwd = document.getElementById("t3").value;
+            var clg = document.getElementById("t4").value;
+            var address = document.getElementById("t5").value;
+            var course = document.getElementById("t6").value;
+            var clgemailid = document.getElementById("t7").value;
+            var clgpwd = document.getElementById("t8").value;
+
+            var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+            var letters = /^[A-Za-z]+$/;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+            if (uname == "") {
+                alert("please enter your name");
+            }
+            else if (!letters.test(uname)) {
+                alert("UserName field required only alphabet characters");
+            }
+            else if (email == "") {
+                alert("Please enter your personal email id");
+            }
+            else if (!filter.test(email)) {
+                alert("Invalid email");
+            }
+            else if (pwd == "") {
+                alert("Please enter Password");
+            }
+            else if (!pwd_expression.test(pwd)) {
+                alert("invalid personal  password");
+            }
+            else if (clg == "") {
+                alert("enter your college name");
+            }
+            else if (!letters.test(clg)) {
+                alert("invalid college name");
+            }
+            else if (address == "") {
+                alert("enter your address");
+            }
+            else if (!letters.test(address)) {
+                alert("invalid address");
+            }
+            else if (course == "") {
+                alert("enter your course name");
+            }
+            else if (!letters.test(course)) {
+                alert("invalid course name");
+            }
+            else if (clgemailid == "") {
+                alert("Please enter your official email id");
+            }
+            else if (!filter.test(clgemailid)) {
+                alert("Invalid email");
+            }
+            else if (clgpwd == "") {
+                alert("Please enter your Password");
+            }
+            else if (!pwd_expression.test(clgpwd)) {
+                alert("invalid official password");
+            }
+            else if (document.getElementById("t8").value.length < 6) {
+                alert('Password minimum length is 6');
+            }
+            else if (document.getElementById("t8").value.length > 12) {
+                alert('Password max length is 12');
+            }
+            else {
+                alert('Thank You for Registration & You are Redirecting to Website');
+                // Redirecting to other page or webste code. 
+                window.location = "";
+            }
+        }
+        
+    </script>
+    <script>
+        function registration(){
+            
+        }
+    </script>
+        
+
+
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="h-tag">
+            <h2 style="text-align: center;">Register Your Details</h2>
+        </div>
+          
+
+        <div class="login">
+            <form name="disp">
+                <table cellspacing="2" align="center" cellpadding="8" border="0">
+                    <tr>
+                        <td align="right">Enter user Name :</td>
+                        <td><input type="text" placeholder="Enter user name here" id="t1" class="tb" required
+                                pattern="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter your personal Email ID :</td>
+                        <td><input type="text" placeholder="Enter your personal Email ID here" id="t2" class="tb" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Password :</td>
+                        <td><input type="password" placeholder="Enter Password here" id="t3" class="tb" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter your college name :</td>
+                        <td><input type="text" placeholder="Enter your college name here" id="t4" class="tb" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter your college address :</td>
+                        <td><input type="text" placeholder="Enter your college address here" id="t5" class="tb" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter your course :</td>
+                        <td><input type="text" placeholder="Enter your course name here" id="t6" class="tb" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter your college Email ID :</td>
+                        <td><input type="text" placeholder="Enter your personal Email ID here" id="t7" class="tb" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">Enter Password :</td>
+                        <td><input type="password" placeholder="Enter Password here" id="t8" class="tb" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="reset" value="Clear Form" id="res" class="btn" />
+                            <input type="submit" value="Create Account" class="btn" onclick="registration()" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+</body>
+
+</html>
