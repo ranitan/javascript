@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window2</title>
+    <center>DETAILS ABOUT CANDIDATE</center>
+    <script>
+    function validateform() {
+        var fName = document.myform.fname.value;
+        var lName = document.myform.lname.value;
+        var dob = document.myform.dob.value;
+        var gender= document.myform.gender.value;
+        
+
+        
+
+
+    }
+</script>
+</head>
+<body>
+    <form name="myform2"method="post" action="" onsubmit="return validateform()">  
+        <label>firstname</label><br>          
+         <input type="text" fname="fname" required><br>
+        <label>lastname</label><br> 
+         <input type="text" fname="lname" required><br>
+        <label>Gender</label><br>
+        <input type="radio" id="gender" name="gender" value="Female">Female<br>
+        <input type="radio" id="gender" name="gender" value="Male">Male<br>
+          <input type="submit" value="sign in">
+          </form> 
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display details 2</title>
+    <center>DISPLAY DETAILS 2</center>
+    <script>
+        function validateform() {
+            var name = document.getElementById("t1").value;
+            var pwd = document.getElementById("t2").value;
+            var cpwd = document.getElementById("t3").value;
+
+            var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+            var letters = /^[A-Za-z]+$/;
+
+            if (name == "") {
+                alert("please enter your name");
+            }
+            else if (!letters.test(name)) {
+                alert("Name field required only alphabet characters and blankspaces");
+            }
+            else if (pwd == "") {
+                alert('Please enter Password');
+
+            }
+            else if (cpwd == "") {
+                alert('Enter Confirm Password');
+
+            }
+            else if (!pwd_expression.test(pwd)) {
+                alert('Password should be the combination of capitals, small letters numbers and special characters like !@#$%^&amp;*');
+
+            }
+            else if (pwd != cpwd) {
+                alert('Password not Matched');
+
+            }
+            else if (document.getElementById("t2").value.length < 8) {
+                alert('Password minimum length is 8');
+            }
+            else if (document.getElementById("t3").value.length > 15) {
+                alert('Password max length is 15');
+
+            }
+            else {
+
+                alert('verified successfully,control goes to next page');
+                window.location = "displaydetails.html";
+
+            }
+        }
+    </script>
+</head>
+<div id="main">
+    <div class="h-tag">
+        <h2 style="text-align: center;">desolay details 2</h2>
+    </div>
+      
+
+    <div class="login">
+        <form name="disp">
+            <table cellspacing="2" align="center" cellpadding="8" border="0">
+                <tr>
+                    <td align="right">Enter your Name :</td>
+                    <td><input type="text" placeholder="Enter user name here" id="t1" class="tb" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">Enter your password:</td>
+                    <td><input type="password" placeholder="Enter your password here" id="t2" class="tb" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">confirm password:</td>
+                    <td><input type="password" placeholder="confirm your Password here" id="t3" class="tb" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="sign in">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+<body>
+   
+</body>
+
+</html>
