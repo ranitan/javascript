@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friends array</title>
+    <center>FRIENDS ARRAY</center>
+</head>
+
+<body>
+    <button type="button" onclick="add1()">add at begning</button>
+    <button type="button" onclick="add2()">add at end</button>
+    <button type="button" onclick="del()">delete </button>
+    <button type="button" onclick="sort()">sort </button>
+    <button type="button" onclick="FOR()">for</button>
+    <button type="button" onclick="FOREACH()">for each </button>
+    <button type="button" onclick="FORIN()">for in</button>
+    <button type="button" onclick="FOROF()">for of</button>
+    <button type="button" onclick="COMMA()">Comma</button>
+    <button type="button" onclick="date()">date & time</button>
+    <script>
+
+        function add1() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            friends.unshift("vindhya");
+            document.write(friends);
+        }
+        function add2() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            friends.push("vindhya");
+            document.write(friends);
+        }
+
+        function del() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            friends.shift();
+            friends.pop();
+            document.write(friends);
+        }
+        function sort() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            friends.sort();
+            document.write(friends);
+        }
+        function FOR() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            for (let i = 0; i < friends.length; i++) {
+                document.write(friends[i]);
+            }
+        }
+        function FOREACH() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            friends.forEach(function (friends) {
+                document.write(friends);
+            })
+
+        }
+        function FORIN() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            for (var key in friends) {
+                document.write(friends[key]);
+            }
+        }
+        function FOROF() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            for (var element of friends) {
+                document.write(friends);
+            }
+        }
+        function COMMA() {
+            var friends = ["ranita", "nija", "manya", "sanjana"];
+            const str = String(friends);
+            document.write(friends);
+        }
+        function date() {
+            const date = new Date();
+            const n = date.toDateString();
+            const time = date.toLocaleTimeString();
+            document.write('Date: ' + n);
+            document.write('Time: ' + time);
+        }
+
+    </script>
+</body>
+
+</html>
